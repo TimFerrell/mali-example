@@ -48,7 +48,9 @@ const updateTodo = async ctx => {
 };
 
 const main = () => {
-  const app = new Mali(PROTO_PATH);
+  const app = new Mali(PROTO_PATH, "Todos", {
+    defaults: true
+  });
   app.use({ createTodo, getTodos, updateTodo });
   app.start("127.0.0.1:50051");
   console.log("Listening...");
