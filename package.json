@@ -1,0 +1,13 @@
+{
+  "name": "mali-example",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Tim Ferrell <timothy.ferrell@auth0.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "~0.3.0",
+    "grpc": "^1.15.1",
+    "mali": "^0.9.1",
+    "path": "^0.12.7"
+  }
+}
