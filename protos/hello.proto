@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package auth0;
+
 service Hello {
     rpc Echo (EchoRequest) returns (EchoResponse) {};
 }
@@ -10,5 +12,5 @@ message EchoRequest {
 
 message EchoResponse {
     string message = 1;
-    int32 timestamp = 2;
+    int64 timestamp = 2;
 }

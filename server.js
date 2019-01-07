@@ -1,11 +1,13 @@
 const path = require("path");
-const Mali = require("Mali");
+const Mali = require("mali");
 
 const PROTO_PATH = path.resolve(__dirname, "./protos/hello.proto");
 
 const echo = async ctx => {
+  console.log("Received request.");
+  console.log(ctx.res);
   ctx.res = {
-    message: ctx.request.res.message,
+    message: ctx.request.req.message,
     timestamp: Date.now()
   };
 };
@@ -15,7 +17,7 @@ const main = () => {
     defaults: true
   });
   app.use({ echo });
-  app.start("127.0.0.1:50051");
+  app.start("0.0.0.0:50051");
   console.log("Listening...");
 };
 
